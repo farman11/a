@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YATAY POWER – Coming Soon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="aurora"></div>
+  <div class="grid-overlay"></div>
+  <div class="particle-layer">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <header class="brand">
+    <div class="logo-glow"></div>
+    <div class="logo-text">YATAY <span>POWER</span></div>
+    <p class="tagline">A Leader in Electricity Delivery &amp; Services</p>
+  </header>
+
+  <main class="hero">
+    <section class="intro">
+      <p class="eyebrow">Future of Energy • Intelligent Delivery • Advanced Services</p>
+      <h1>A New Era of Energy Innovation is Coming</h1>
+      <p class="subhead">We’re building a powerful new platform for smart energy solutions, sustainability, and advanced power technologies. YATAY POWER will launch soon with a modern experience, clean design, and next-generation services for homes, industries, and enterprises.</p>
+      <p class="description">Yatay Power has led electricity delivery since 2018 as a dedicated division within Yatay Company. Powered by a team of highly trained professionals, we deliver reliable infrastructure, precision engineering, and excellent service quality. Our strong alliances with global manufacturers of switchgears, transformers, and other critical components ensure we deploy only the most trusted technology across every project.</p>
+      <p class="description">These proven results are more than milestones—they fuel our commitment to smarter grids, resilient systems, and innovative energy services that light the way forward.</p>
+    </section>
+
+    <section class="countdown-card">
+      <div class="countdown-title">Launching Soon</div>
+      <div class="countdown" id="countdown">
+        <div class="time-block"><span class="value" id="days">00</span><span class="label">Days</span></div>
+        <div class="time-block"><span class="value" id="hours">00</span><span class="label">Hours</span></div>
+        <div class="time-block"><span class="value" id="minutes">00</span><span class="label">Minutes</span></div>
+        <div class="time-block"><span class="value" id="seconds">00</span><span class="label">Seconds</span></div>
+      </div>
+      <div class="cta-row">
+        <a class="primary-btn" href="mailto:info@yatayenergy.com">Notify Me</a>
+        <p class="cta-text">Want to be notified when we launch? Subscribe to updates: <a href="mailto:info@yatayenergy.com">info@yatayenergy.com</a><br />or follow Yatay Group for updates.</p>
+      </div>
+    </section>
+
+    <section class="highlights">
+      <div class="card">
+        <h3>Smart Delivery</h3>
+        <p>Optimized electricity distribution with real-time monitoring, proactive reliability, and precision control for every network.</p>
+      </div>
+      <div class="card">
+        <h3>Trusted Partnerships</h3>
+        <p>Collaborations with leading manufacturers of switchgears, transformers, and critical grid components ensure world-class performance.</p>
+      </div>
+      <div class="card">
+        <h3>Innovation Pipeline</h3>
+        <p>High-tech solutions, digital automation, and advanced analytics that keep industries, enterprises, and communities moving forward.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="power-wave"></div>
+    <p>© 2025 YATAY POWER – Powered by Yatay Group. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const launchDate = new Date('2025-09-01T00:00:00Z').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = Math.max(launchDate - now, 0);
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById('days').textContent = String(days).padStart(2, '0');
+      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
